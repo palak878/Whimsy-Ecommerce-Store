@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whimsy</title>
+  <title>About Us - Whimsy</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .header {
@@ -12,28 +12,60 @@
       position: relative;
       z-index: 9; /* Ensure header stays above other content */
     }
+    .header {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      backdrop-filter: blur(10px); /* Blur effect for modern browsers */
+      position: relative;
+      z-index: 1;
+      /* Ensure header stays above other content */
+    }
+
+    .justified-text {
+      text-align: justify;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      -webkit-text-fill-color: black;
+      ;
+    }
+
+    .background-section {
+      background-size: cover; /* Make sure the background covers the entire section */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Prevent the background image from repeating */
+      padding: 30px; 
+      height: 700px;
+      backdrop-filter: blur(10px); /* Blur effect for modern browsers */
+    }
   </style>
- 
 </head>
 <body>
-
-  
   <!-- Header Section -->
   <header class="text-gray-600 body-font header">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <img src="WHIMSY (3).png" alt="WHimsy Logo" width="110" height="90"class="logo">
-    </a>
+        <img src="WHIMSY (3).png" alt="WHimsy Logo" width="110" height="90" class="logo">
+      </a>
       <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
         <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
         <a href="aboutus.html" class="mr-5 hover:text-gray-900">About Us</a>
         <a href="contactus.html" class="mr-5 hover:text-gray-900">Contact Us</a>
       </nav>
-      
     </div>
   </header>
 
-
+  <!-----------------------------------------------section------------------------------------->
+  <section class="text-gray-600 body-font background-section">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">About Us</h1>
+      </div>
+      <p class="justified-text">
+        At Whimsy, we take pride in offering a diverse array of products through our efficient dropshipping model. Our store is a treasure trove of delightful finds, carefully curated to bring joy and creativity to your life. From charming home decor and unique accessories to innovative gadgets and thoughtful gifts, our selection is designed to cater to all your needs and whims. By partnering with reliable suppliers, we ensure that every item we offer meets our high standards of quality and whimsy. Whether you're looking for the perfect gift or a special treat for yourself, WHimsy General Store promises a seamless shopping experience with products delivered straight to your doorstep. Explore our wide range of offerings and discover the enchanting charm that makes us a favorite among our customers.
+        Our store is a treasure trove of delightful finds, carefully curated to bring joy and creativity to your life. From charming home decor and unique accessories to innovative gadgets and thoughtful gifts, our selection is designed to cater to all your needs and whims.
+        By partnering with reliable suppliers, we ensure that every item we offer meets our high standards of quality and whimsy.
+        Whether you're looking for the perfect gift or a special treat for yourself, WHimsy General Store promises a seamless shopping experience with products delivered straight to your doorstep. Explore our wide range of offerings and discover the enchanting charm that makes us a favorite among our customers.
+      </p>
+        
   <section class="text-gray-100 body-font">
     <div class="container px-4 py-24 mx-auto flex flex-wrap">
       <div class="lg:w-2/3 mx-auto">
@@ -43,85 +75,19 @@
             </a>
           </div>
         </div>
+      </section>
+ 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   
-  <!-- products -->
-
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto">
-        <h2 class="text-3xl font-medium text-gray-900 mb-8 text-base">Explore our wide range of products</h2>
-
-      <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a href = "tumcategory.html" class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="tum1.png">
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">Tumblers</h2>
-        </div>
-      </div>
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a href="smartplug(pay).html" class="block relative h-48 rounded overflow-hidden">
-        
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="smart plug.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Smart Plug</h2>
-          </div>
-        </div>
-
-        <!----------------------------1st product------------>
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a href = "led pay.html" class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="led.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Led Acrylic Board</h2>
-          </div>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a href="airhumi(pay).html" class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="airhumidifier.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Rain Cloud Air Humidifier</h2>
-          </div>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a href="guasha(pay).html"class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="guasha.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Gua Sha</h2>
-          </div>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a href="makeupclean(pay).html"class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="makeupclean.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Automatioc Makeup Brush Cleaner</h2>
-          </div>
-        </div>
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a href ="mirror(pay).html"class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="mirror.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Wave Mirror</h2>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
 
 <!--end section-->
 <html>

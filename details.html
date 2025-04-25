@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment -Whimsy</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .header {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      backdrop-filter: blur(10px); /* Blur effect for modern browsers */
+      position: relative;
+      z-index: 1; /* Ensure header stays above other content */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="text-gray-600 body-font header">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="WHIMSY (3).png" alt="WHimsy Logo" width="110" height="90" class="logo">
+      </a>
+      <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+        <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+        <a href="aboutus.html" class="mr-5 hover:text-gray-900">About Us</a>
+        <a href="contactus.html" class="mr-5 hover:text-gray-900">Contact Us</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <section class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Shipping Address</h1>
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <form id="orderForm" action="https://api.web3forms.com/submit" method="POST" class="flex flex-wrap -m-2">
+          <input type="hidden" name="access_key" value="a36ca29d-d034-4009-86f1-b4291d7fa6b3">        
+
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="number" class="leading-7 text-sm text-gray-600">Contact Number</label>
+              <input type="number" id="number" name="number" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="address1" class="leading-7 text-sm text-gray-600">Street Address</label>
+              <input type="text" id="address1" name="address1" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="address2" class="leading-7 text-sm text-gray-600">Address Line 2</label>
+              <input type="text" id="address2" name="address2" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="pincode" class="leading-7 text-sm text-gray-600">Pin Code</label>
+              <input type="text" id="pincode" name="pincode" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="landmark" class="leading-7 text-sm text-gray-600">Nearest Landmark</label>
+              <input type="text" id="landmark" name="landmark" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="city" class="leading-7 text-sm text-gray-600">City</label>
+              <input type="text" id="city" name="city" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="state" class="leading-7 text-sm text-gray-600">State</label>
+              <input type="text" id="state" name="state" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label class="leading-7 text-sm text-gray-600">Payment Method</label>
+              <div class="flex items-center">
+                <input type="radio" id="cod" name="payment_method" value="cash_on_delivery" class="mr-2">
+                <label for="cod" class="mr-4 text-gray-700">Cash on Delivery</label>
+                <input type="radio" id="upi" name="payment_method" value="upi" class="mr-2">
+                <label for="upi" class="text-gray-700">UPI</label>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Place Order</button>
+          </div>
+        </form>
+        <div id="responseMessage" class="hidden p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center text-green-500">Order is placed successfully.</div>
+        <div id="scannerImage" class="hidden p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+          <img src="scanner.png" alt="Please scan the QR code below via UPI. You will receive a call shortly." class="mx-auto">
+        </div>
+      </div>
+      <p><h4>*You will receive a call shortly for the confirmation of the order placed.</h4></p>
+      <p>*If you have any queries, please contact us at whimsystore01@gmail.com</p>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('orderForm');
+      const responseMessage = document.getElementById('responseMessage');
+      const scannerImage = document.getElementById('scannerImage');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const paymentMethod = document.querySelector('input[name="payment_method"]:checked').value;
+
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+        }).then(response => response.json()).then(data => {
+          if (data.success) {
+            if (paymentMethod === 'cash_on_delivery') {
+              responseMessage.classList.remove('hidden');
+              responseMessage.textContent = 'Your order is placed successfully!';
+              scannerImage.classList.add('hidden');
+            } else if (paymentMethod === 'upi') {
+              responseMessage.classList.add('hidden');
+              scannerImage.classList.remove('hidden');
+            }
+          } else {
+            alert('There was an error placing your order. Please try again.');
+          }
+        }).catch(error => {
+          alert('There was an error placing your order. Please try again.');
+        });
+      });
+    });
+  </script>
+
+<!--end section-->
+
+<!--end section-->
+<html>
+
+<body>
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="aboutus.html">About Us</a></li>
+      <li class="menu__item"><a class="menu__link" href="contactus.html">Contact Us</a></li>
+
+    </ul>
+    <p>&copy;2024 Whimsy</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+<style>
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display:block;
+  background: #ffffff;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 14px 0 19px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+</style>
